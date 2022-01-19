@@ -1,0 +1,63 @@
+@media (max-width: 600px){
+    .showcase .showcaseText{
+        text-align: center;
+        background-image: linear-gradient(to top, rgba(73, 112, 2,0.5), rgba(73, 112, 2,0.1));
+        .showcaseTexth2{
+            width: 80%;
+            font-size: 60px;
+        }
+            
+    }
+    
+    
+    .showcaseAbout{
+        height: 100vh;
+        .showcaseAboutContainer{
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 50px 0;
+            width: 80%;
+            text-align: center;
+            .showcaseAboutContainerText{
+                width: 100%;
+                @include flexCenter();
+                flex-direction: column;
+                h3{
+                    padding: 0;
+                }
+                p{
+                    margin:10px 0;
+                }
+            }
+        }
+    }
+
+    .network{
+        height: 60vh;
+        .networkContainer{
+            width: 80%;
+            .countries span{
+                padding: 10px;
+            }
+            img{
+                display: none;
+            }
+        }
+    }
+
+    .contact{
+        height: 90vh;
+        .contactContainer{
+            flex-direction: column;
+            justify-content: space-evenly;
+            img{
+                width: 100%;
+            }
+            .contactBox{
+                text-align: center;
+                width: 100%;
+                height: 40%;
+            }
+        }
+    }
+}
