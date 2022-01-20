@@ -79,77 +79,7 @@ $light-color: rgb(243, 255, 228);
     
 }
 
-.showcaseProduct{
-    height: 100vh;
-    background-color: $tertiary-color;
-    
-    &Content{
-        @include flexCenter();
-        flex-direction: column;
-        height: 100%;
-        width: 80%;
-        margin: auto;
-        h3{
-            letter-spacing: 2px;
-            padding: 20px 0;
-            font-size: 26px;
-            color: $primary-color;
-        }
-        .owl-carousel{
-            margin-top: 20px;
-        }
-        .owl-nav{
-            .owl-prev {
-                width: 40px;
-                height: 400px;
-                position: absolute;
-                top: 0%;
-                display: block !important;
-            }
-            
-            .owl-next {
-                width: 40px;
-                height: 400px;
-                position: absolute;
-                top: 0%;
-                right: 0px;
-                display: block !important;  
-            }
-            .owl-prev i, .owl-next i {
-                transform : scale(3,3); 
-                color: $primary-color; 
-                opacity: 0.5;
-                transition: 0.2s ease;
-                &:hover{
-                    opacity: 1;
-                }
-            }
-        }
-        
-        .items{
-            position: relative;
-            height: 400px;
-            p{
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right:0;
-                background-color: rgba(255,255,255,0.7);
-                color: $primary-color;
-                visibility: hidden;
-                opacity: 0;
-                transition: opacity .2s, visibility .2s;
-                
-            }
-            &:hover p{
-                visibility: visible;
-                opacity: 1;
-            }
-        }
-    }
-    
-}
+@import './showcaseProduct';
 
 .network{
     

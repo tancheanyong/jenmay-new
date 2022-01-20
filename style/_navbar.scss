@@ -50,6 +50,7 @@
         font-size: 26px;
         color: $secondary-color;
         margin-right: 30px;
+        cursor: pointer;
     }
 }
 .hiddenMenu{
@@ -78,6 +79,7 @@
             font-size: 26px;
             color: $secondary-color;
             margin: 30px;
+            cursor: pointer;
         }
         &-li{
             width: 0;

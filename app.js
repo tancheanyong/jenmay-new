@@ -1,56 +1,16 @@
-//navbar scroll animation
-const scrollFunc = () => {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.querySelector(".navbar").style.height = "60px";
-  } else {
-    document.querySelector(".navbar").style.height = "100px";
-  }
-}
+const express = require('express');
+const app=express();
 
-window.onscroll = () => scrollFunc();
+app.set('view engine','ejs');
 
-//navbar hidden menu on mobile mode
-const navbarIcon = document.querySelector(".navbarIcon");
-const hiddenMenuIcon = document.querySelector('.hiddenMenu-ulIcon');
-const hiddenMenu = document.querySelector('.hiddenMenu');
-const list = document.querySelector('.hiddenMenu-ul').querySelectorAll('.hiddenMenu-ul-li');
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+app.use(express.static(__dirname+'/public'));
 
-navbarIcon.addEventListener('click', () => {
-  console.log(list);
-  hiddenMenu.style.width = '90%';
-  hiddenMenuIcon.style.display = 'block';
-  list[0].style.width = 'auto';
-  list[1].style.width = 'auto';
-  list[2].style.width = 'auto';
-});
-hiddenMenuIcon.addEventListener('click', () => {
-  hiddenMenu.style.width = '0'
-  hiddenMenuIcon.style.display = 'none';
-  list[0].style.width = '0';
-  list[1].style.width = '0';
-  list[2].style.width = '0';
-});
+const router = require('./route/router')
+app.use('/',router);
 
-//Carousel
-$(document).ready(function() { 
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    autoWidth:false,
-    nav:true,
-    dots:false,
-    navText: ['<i class="fas fa-chevron-circle-left"></i>','<i class="fas fa-chevron-circle-right"></i>'],
-    responsive:{
-        0:{
-            items:1
-        },
-        900:{
-          items:3
-        }
-    }
-  })
-});
-
-
-
-
+const port = 3000 || process.env.PORT;
+app.listen(port, ()=>{
+    console.log('Website started at port '+port);
+})
