@@ -10,7 +10,7 @@ app.use(express.static(__dirname+'/public'));
 const router = require('./route/router')
 app.use('/',router);
 
-const port = 3000 || process.env.PORT;
-app.listen(port, ()=>{
+const ports = 3000 || process.env.PORT;
+app.listen(ports, ()=>{
     console.log('Website started at port '+port);
 })
