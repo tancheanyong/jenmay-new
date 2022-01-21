@@ -12,5 +12,5 @@ app.use('/',router);
 
 const ports = 3000 || process.env.PORT;
 app.listen(ports, ()=>{
-    console.log('Website started at port '+port);
+    console.log('Website started at port '+ports);
 })
