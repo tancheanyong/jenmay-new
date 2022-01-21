@@ -7,6 +7,7 @@ const scrollFunc = () => {
   }
 }
 
+
 window.onscroll = () => scrollFunc();
 
 //navbar hidden menu on mobile mode

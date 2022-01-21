@@ -5,4 +5,11 @@ router.get('/',(req,res)=>{
     res.render('index');
 })
 
+router.get('/products',(req,res)=>{
+    res.render('products');
+})
+
+router.get('/contact',(req,res)=>{
+    res.render('contact');
+})
 module.exports=router;

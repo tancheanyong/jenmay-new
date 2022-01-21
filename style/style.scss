@@ -1,26 +1,5 @@
+@import './presets';
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Sora', sans-serif;
-}
-$primary-color: rgb(10, 87, 0);
-$secondary-color: rgb(255, 175, 25);
-$tertiary-color: rgb(222, 223, 184);
-$light-color: rgb(243, 255, 228);
-
-
-
-@mixin flexCenter(){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@keyframes fadeIn {
-    from{opacity: 0;}
-    to{opacity: 1;}
-}
 @import './navbar';
 
 .line{
@@ -31,6 +10,7 @@ $light-color: rgb(243, 255, 228);
     background-size: cover;
     background-position: center;
     height: 100vh;
+    animation: fadeIn 0.4s ease-in;
     &Text{
         @include flexCenter();
         height: 100%;
